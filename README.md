@@ -1,4 +1,4 @@
-#**🏠 House Price Predictor**
+#*🏠 House Price Predictor*
 
 This is a Flask-based machine learning web application that predicts house prices in Gurgaon using housing and location-related features. The project covers model training, data preprocessing, and a simple web interface for making predictions.
 
