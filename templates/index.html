@@ -1,0 +1,129 @@
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>House Price Predictor</title>
+        <link rel="stylesheet" href="/static/style2.css">
+    </head>
+
+    <body>
+        <nav>
+            <div class="logo">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0PDxINDQ8NDQ0NDw0NDQ0NDw8ODg8NFREWFhURFRUYHSkgGBolHhU
+                VITEhJSsrLi4uFx8/ODMsNygtMCsBCgoKDg0OFxAQGislICUuMy03LjExMS0rLSsrMjUtLS02Li0tLy0rLSstLTErLS0rLS0rNS0rLS0tLS0tLS0tLf/AABEIALo
+                BDwMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAABAIDAQUHBgj/xABJEAACAgECAwMGCAkKBwEAAAABAgADBAURBhIhMUFRBxMUMmFxIjNScoGRobEVIzV
+                TYnR1s7UkNHOCkqKytMHRJTZDVIST4kL/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQIDBAX/xAAsEQEAAgECBQEHBQEAAAAAAAAAAQIRAyESEzFBUXEEMmKRodHhFGG
+                BwfEi/9oADAMBAAIRAxEAPwD0NNceprlVKR6lIFlSRqtJGpI1WkCVaRhFmEWXosARZaqzKrLFWEYVZYFmQJICBgCZ2mQJmFY2mdpmEAhCEAhCEAhtCEDG0xtJQgQ
+                2mCJPaYIgVFZBllxEiRCFmWVOsaZZWywE3WL2JHnWUOsK11iRS2ubOxIpakDVXVxG6ube5IjckBulI7UsppWOVLAtqWNIshWsYRYEkWXqsiiy5RCMqJYBBRJAQAC
+                SAgBMwohCEAhCEAhCEAhCEAhCEAhCEAhCEDBEiRJzBECsiVMJeRIMIQsyyh1jbCUusBOxYrasfdYtYsK1tqRK5JtLViVyQGKljlSyipY5UsC2sRhBK6xGEECaiWq
+                JFRLQIRkCSAmBJQohCEAhCEAhCEAhCECjPyRTTZcQWFNdlpUdCQqlth9US4e1/E1CkX4lgdegdD8GytvkuvcfsPdvLOIf5nk/q2T+6afNmj6rk4dq5GLY1Vq7Ddf
+                VZfkuvYy+wz0aOjzKz5Ytbhl9RwniuCPKFjahy0X8uNm9grJ/F3HxqJ7/ANE9fftvPazjak1nEtRMT0EIQmVEIQgEIQgRIkSJZImBUwlLCMESpxCFXWL2COOIu4h
+                SNqxO1ZsLVilqwLahHKxF6hGqxAvrEvQSpBL0EImolgkVkxCsiZhCAQhCAQhCAQhCAQhCBr+If5nk/q2T+6afL4n1BxD/ADPJ/Vsn900+XxPf7H0s46vZkHvHQjY
+                gjoQfGdM4I8p71cuNqha2r1UzOrW1juFo7XH6Xb479o5mASQACSSAABuST2ADvM99w55N7GT0vV7BgYajnZHKpcy/pE9Kh7/hewTvrcvh/wC2a5zs7fVYrKHUhlY
+                BlYHcFSNwRJTmGpeUUc1OLpVTejC7HxTmWoxXbcDkrB7+Xvbr7O+dPnyXoEIQgEIQgEwZmECBlbCWmQYQhdxF7BGnEocQE7BFLRHrBFLRCrKhGqxF6o1XAvSXIJU
+                kvSETEmJESQhWYQhAIQhAIQhAIQhAJTl5VVKNbc6VVIOZ7LGCoo8STPM8TcdYuI3o1CtnZ7HkTFx/hEP4ORvsfYNz7O+eG420jVbcGzUtVuCFGq9H0+r4urnsVSW
+                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"
+                    alt="Logo">
+            </div>
+            <div class="right">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+
+            <div class="my">
+
+
+                <h1>Gurgoan House Price Prediction</h1>
+                <form class="form-row" action="/" method="POST">
+                   
+                   <div class="row">
+
+                   <div class="c1">
+                        <ul>
+                            <li>
+                                <label for="">Enter Longitude</label><br>
+                                <input name="longitude" placeholder="Longitutde"><br>
+                            </li>
+                            <li>
+
+                                <label for="">Enter Lattitude</label><br>
+                                <input name="latitude" placeholder="Lattitude"><br>
+                            </li>
+                            <li>
+
+                                <label for="">Enter housing_median_age</label><br>
+                                <input name="housing_median_age" placeholder="housing_median_age"><br>
+                            </li>
+                            <li>
+
+                                <label for="">Enter households</label><br>
+                                <input name="households" placeholder="Households"><br>
+                            </li>
+                            <li>
+                                <label for="">Enter total_rooms</label><br>
+                                <input name="total_rooms" placeholder="total rooms"><br>
+
+                            </li>
+                        </ul>
+
+
+                    </div>
+                    <div class="c2">
+
+                        <ul>
+                            
+                            <li>
+                                <label for="">Enter total_bedrooms</label><br>
+                                <input name="total_bedrooms" placeholder="total bedrooms"><br>
+
+                            </li>
+                            <li>
+
+                                <label for="">Enter population</label><br>
+                                <input name="population" placeholder="tottal rooms"><br>
+                            </li>
+                            <li>
+
+                                <label for="">Enter median_income</label><br>
+                                <input name="median_income" placeholder="Median income"><br>
+                            </li>
+
+                            <li>
+                                <label for="ocean_proximity">Ocean Proximity</label>
+
+                                <select id="ocean_proximity" name="ocean_proximity">
+                                    <option value="">-- Select --</option>
+                                    <option value="<1H OCEAN">1H OCEAN</option>
+                                    <option value="INLAND">INLAND</option>
+                                    <option value="NEAR OCEAN">NEAR OCEAN</option>
+                                    <option value="NEAR BAY">NEAR BAY</option>
+                                    <option value="ISLAND">ISLAND</option>
+                                </select>
+
+                            </li>
+                        </ul>
+                    </div>
+                    </div> 
+
+                    <div class="b">
+                    <button type="submit">Predict</button>
+                    </div>
+                </form>
+
+        </main>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Gurgoan House Price Predictor. All rights reserved.</p>
+
+        </footer>
+    </body>
+
+    </html>
