@@ -1,0 +1,110 @@
+body{
+    background: #f3efef;
+}
+nav{
+    background: #ffffff;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    border-radius: 15px;
+
+}
+nav img{
+    height: 50px;
+    width:80px;
+    border-radius: 100%;
+    margin-left:8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+nav ul {
+    margin-left: 10px;
+    display: flex;
+    gap: 25px;
+    
+}
+nav ul li{
+    display: flex;
+}
+
+.my{
+    background: #ffffff;
+    height: 550px;
+    border-radius: 15px;
+    
+  
+}
+.my h1{
+    padding: 30px;
+    text-align: center;
+
+
+    
+}
+.form-row label {
+    width: 300px;       /* same width for all labels */
+    font-weight: 500;   
+}
+
+.form-row input{
+    height: 35px;
+    width: 200px;
+    border-radius:5px ;
+}
+form{
+    font-size: 20px;
+    margin-left: 120px;
+    text-align: center;
+    margin-top: 50px;
+
+   display: flex;
+    flex-direction: column;  
+    align-items: center;
+    
+}
+.c1 ul li{
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+.c2 ul li{
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+.c3 ul li{
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+footer{
+    background: #222a42;
+    color: white;
+    height: 100px;
+    padding: 4px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 15px;
+}
+.b button{
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    background-color: rgb(43, 191, 255);
+    border-radius: 20px;
+    border-color: rgb(43, 191, 255);
+    display:block;
+}
+.row{
+  
+    display: flex;
+    gap: 80px;
+}
+
+input:focus,
+button:focus {
+    outline: none;                 /* remove default outline */
+    border: 2px solid #2bbfff;     /* blue border */
+    box-shadow: 0 0 6px #2bbfff;   /* glow effect */
+}
